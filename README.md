@@ -14,11 +14,11 @@ Modern, responsive portfolio website showcasing full-stack development expertise
 - 🚀 Performance optimizations
 
 ### Technical Stack Showcased
-- **Backend**: Laravel 10, PHP 8+
-- **Frontend**: Vue3, TypeScript, Composition API
+- **Backend**: Laravel 12, PHP 8+
+- **Frontend**: Vue3
 - **Styling**: Tailwind CSS, SCSS
-- **Database**: MySQL, PostgreSQL
-- **Tools**: Redis, WebSockets, Elasticsearch
+- **Database**: MySQL
+- **Tools**: WebSockets
 - **Architecture**: Microservices, API Development
 
 ### Projects Featured
@@ -26,8 +26,6 @@ Modern, responsive portfolio website showcasing full-stack development expertise
 2. **Sunsimexco Platform** - Enterprise business management system
 3. **3WinBiz Back-Office** - Multi-tenant enterprise platform
 4. **HEMIS Education System** - University management system
-5. **E-commerce Solution** - Modern online store with payment integration
-6. **AI Analytics Dashboard** - SaaS platform with machine learning
 
 ### Key Improvements
 - Enhanced SEO with updated meta tags and keywords
