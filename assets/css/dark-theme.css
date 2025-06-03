@@ -312,8 +312,7 @@ a:hover {
   font-size: 3.2rem;
   margin-bottom: var(--spacing-lg);
   position: relative;
-  display: flex;
-  justify-content: center;
+  display: block;
 }
 
 .section-title::after {
@@ -330,6 +329,32 @@ a:hover {
     var(--accent-secondary)
   );
   border-radius: 2px;
+}
+
+/* Left-aligned section titles */
+.section-title.text-left {
+  text-align: left;
+}
+
+.section-title.text-left::after {
+  left: 0;
+  transform: translateX(0);
+}
+
+/* Right-aligned section titles */
+.section-title.text-right {
+  text-align: right;
+}
+
+.section-title.text-right::after {
+  left: auto;
+  right: 0;
+  transform: translateX(0);
+}
+
+/* Center-aligned section titles (default) */
+.section-title.text-center {
+  text-align: center;
 }
 
 /* ===================================================================
@@ -360,7 +385,6 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-sm) 0;
   height: 70px;
 }
 
@@ -1638,7 +1662,6 @@ a:hover {
 /* Contact CTA Section */
 .contact-cta {
   text-align: center;
-  margin-bottom: var(--spacing-xl);
   padding: var(--spacing-xl);
   background: linear-gradient(
     135deg,
@@ -1772,7 +1795,6 @@ a:hover {
 .connect-profiles {
   width: 100%;
   margin-top: var(--spacing-md);
-  padding-top: var(--spacing-lg);
   position: relative;
   z-index: 2;
 }
@@ -3120,145 +3142,97 @@ a:hover {
   transform: translateY(-5px);
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .about-main {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-xl);
-  }
-
-  .about-image-section {
-    margin: 0 auto;
-    max-width: 500px;
-  }
-
-  .about-info {
-    padding-left: 0;
-    text-align: center;
-  }
-
-  .about-skills {
-    max-width: 600px;
-    margin: 0 auto var(--spacing-xl);
-  }
-
-  .about-highlights {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .about-stats {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 600px;
-    margin: 0 auto;
-  }
+/* Experience & Education Refactored Layout */
+.experience-education-container {
+  position: relative;
 }
 
+.subsection-header {
+  display: flex;
+  align-items: center;
+  margin: var(--spacing-xl) 0 var(--spacing-lg) 0;
+  gap: var(--spacing-lg);
+}
+
+.subsection-header:first-child {
+  margin-top: 0;
+}
+
+.education-header {
+  margin-top: calc(var(--spacing-xl) * 2);
+}
+
+.subsection-title {
+  font-size: 2.8rem;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-bold);
+  min-width: fit-content;
+  position: relative;
+}
+
+.subsection-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--accent-color),
+    var(--accent-secondary)
+  );
+  border-radius: 2px;
+}
+
+.subsection-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-color), transparent);
+  opacity: 0.6;
+}
+
+/* Enhanced timeline spacing for subsections */
+.experience-education-container .timeline-container {
+  margin-bottom: var(--spacing-lg);
+}
+
+.experience-education-container .timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments for subsection headers */
 @media (max-width: 768px) {
-  .about-image-wrapper {
-    max-width: 280px;
-    margin: 0 auto var(--spacing-md);
+  .subsection-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
   }
 
-  .about-image {
-    width: 220px;
-    height: 220px;
+  .subsection-title {
+    font-size: 2.4rem;
   }
 
-  .image-decoration {
-    top: -15px;
-    left: -15px;
-    right: -15px;
-    bottom: -15px;
+  .subsection-line {
+    width: 100%;
+    height: 2px;
   }
 
-  .highlight-item {
-    padding: var(--spacing-xs) var(--spacing-sm);
-    font-size: 1.2rem;
-  }
-
-  .highlight-icon {
-    width: 25px;
-    height: 25px;
-  }
-
-  .about-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-md);
-  }
-
-  .stat-item {
-    padding: var(--spacing-md) var(--spacing-sm);
-  }
-
-  .skill-tag {
-    font-size: 1.2rem;
-    padding: var(--spacing-xs) var(--spacing-sm);
-    margin: 2px;
+  .education-header {
+    margin-top: var(--spacing-xl);
   }
 }
 
 @media (max-width: 480px) {
-  .about-main {
-    gap: var(--spacing-lg);
-  }
-
-  .about-image {
-    width: 180px;
-    height: 180px;
-  }
-
-  .about-intro h3 {
-    font-size: 2.2rem;
-  }
-
-  .about-description {
-    font-size: 1.5rem;
-    line-height: 1.5;
-  }
-
-  .about-skills h4 {
-    font-size: 1.8rem;
-  }
-
-  .about-stats {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-sm);
-  }
-
-  .highlight-item {
-    margin-bottom: var(--spacing-xs);
-    width: 100%;
-    justify-content: center;
-  }
-
-  .stat-number {
+  .subsection-title {
     font-size: 2rem;
   }
 
-  .stat-label {
-    font-size: 1.2rem;
+  .subsection-header {
+    margin: var(--spacing-lg) 0;
   }
-}
 
-/* ===================================================================
- * # CTA PROMPT
- * ------------------------------------------------------------------- */
-
-.cta-prompt {
-  font-size: 1.8rem;
-  color: var(--accent-color);
-  margin-bottom: var(--spacing-md);
-  font-weight: var(--font-weight-medium);
-  animation: pulse-text 2s infinite alternate;
-}
-
-@keyframes pulse-text {
-  0% {
-    opacity: 0.7;
-  }
-  100% {
-    opacity: 1;
-    text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+  .education-header {
+    margin-top: var(--spacing-lg);
   }
 }
