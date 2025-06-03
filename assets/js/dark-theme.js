@@ -26,7 +26,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const header = document.getElementById('header');
     const scrollTop = document.getElementById('scroll-top');
+    const sections = document.querySelectorAll('section[id]');
     let ticking = false;
+
+    function highlightNavigation() {
+        const scrollY = window.scrollY;
+
+        // Find which section is currently in view
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - header.offsetHeight - 20;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                // Remove active class from all nav links
+                document.querySelectorAll('.nav-link').forEach(navLink => {
+                    navLink.classList.remove('active');
+                });
+
+                // Add active class to current section's nav link
+                const activeLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
+        });
+    }
 
     function handleScroll() {
         const scrollY = window.scrollY;
@@ -55,28 +80,40 @@ document.addEventListener('DOMContentLoaded', function () {
             requestAnimationFrame(handleScroll);
             ticking = true;
         }
-    });
-
-    // ===================================================================
+    });// ===================================================================
     // # MOBILE NAVIGATION
     // ===================================================================
 
     const mobileToggle = document.getElementById('mobile-toggle');
     const navMenu = document.getElementById('nav-menu');
+    const body = document.body;
 
     if (mobileToggle && navMenu) {
         mobileToggle.addEventListener('click', function () {
             mobileToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
+            body.classList.toggle('menu-open');
         });
 
-        // Close mobile menu when clicking on nav links
+        // Close mobile menu when clicking on nav links or outside the menu
         const navLinks = document.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
             link.addEventListener('click', function () {
                 mobileToggle.classList.remove('active');
                 navMenu.classList.remove('active');
+                body.classList.remove('menu-open');
             });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function (e) {
+            if (navMenu.classList.contains('active') &&
+                !navMenu.contains(e.target) &&
+                !mobileToggle.contains(e.target)) {
+                mobileToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                body.classList.remove('menu-open');
+            }
         });
     }
 
@@ -116,33 +153,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 behavior: 'smooth'
             });
         });
-    }
-
+    }    // ===================================================================
+    // # SCROLL ANIMATIONS
     // ===================================================================
-    // # ACTIVE NAVIGATION HIGHLIGHTING
-    // ===================================================================
-
-    const sections = document.querySelectorAll('section[id]');
-    const navLinksForHighlight = document.querySelectorAll('.nav-link');
-
-    function highlightNavigation() {
-        const scrollPosition = window.scrollY + 200;
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                navLinksForHighlight.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${sectionId}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-        });
-    }
 
     // ===================================================================
     // # SCROLL ANIMATIONS
@@ -227,27 +240,29 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }, 600);
         });
-    });
-
-    // ===================================================================
+    });    // ===================================================================
     // # STATS COUNTER ANIMATION
     // ===================================================================
 
     const statsNumbers = document.querySelectorAll('.stat-number');
 
     const animateCounter = (element) => {
-        const target = parseInt(element.textContent.replace(/\D/g, ''));
+        // Check if element has data-target attribute
+        const targetValue = element.hasAttribute('data-target')
+            ? parseInt(element.getAttribute('data-target'))
+            : parseInt(element.textContent.replace(/\D/g, ''));
+
         const suffix = element.textContent.replace(/\d/g, '');
         let current = 0;
-        const increment = target / 60; // 60 frames for 1 second animation
+        const increment = targetValue / 60; // 60 frames for 1 second animation
 
         const updateCounter = () => {
             current += increment;
-            if (current < target) {
+            if (current < targetValue) {
                 element.textContent = Math.floor(current) + suffix;
                 requestAnimationFrame(updateCounter);
             } else {
-                element.textContent = target + suffix;
+                element.textContent = targetValue + suffix;
             }
         };
 
@@ -287,9 +302,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 icon.style.boxShadow = '0 0 20px rgba(0, 255, 255, 0.3)';
             }
         });
-    });
-
-    // ===================================================================
+    });    // ===================================================================
     // # CONTACT METHOD INTERACTIONS
     // ===================================================================
 
