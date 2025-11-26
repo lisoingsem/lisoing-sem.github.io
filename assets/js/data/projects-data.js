@@ -4,17 +4,20 @@
 
 const projectsData = [
   {
-    title: "NetBlock Platform",
-    category: "Network Management",
+    title: "NetBlock",
+    category: "Parental Control & Digital Wellbeing Platform",
     status: "Live",
     description:
-      "Delivered a complete infrastructure for a network intelligence platform, combining a marketing site with secure APIs to manage customer subscriptions and analytics dashboards.",
+      "Parental control platform for managing children's screen time with scheduled blocking, app lock, live location tracking, and geofencing alerts. Built with secure APIs for subscription management and real-time device monitoring.",
     technologies: [
       "PHP",
       "Node.js",
       "Express",
       "API Design",
       "Database Analysis",
+      "Real-time Tracking",
+      "Subscription Management",
+      "Analytics Dashboard",
     ],
     url: "https://www.netblock.app/",
   },

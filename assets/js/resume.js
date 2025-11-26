@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
     window.renderExperience("experience-container", window.experienceData);
   }
 
+  if (typeof window.renderProjects === "function") {
+    window.renderProjects("projects-container", window.projectsData);
+  }
+
   if (typeof window.renderEducation === "function") {
     window.renderEducation("education-container", window.educationData);
   }
