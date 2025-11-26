@@ -1,0 +1,48 @@
+/* Landing Page Specific Styles */
+
+/* Animation SVG styles */
+.animation-svg-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.animation-svg-container svg {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  max-height: 527px;
+  display: block;
+}
+
+/* Responsive sizing */
+@media (min-width: 640px) {
+  .animation-svg-container {
+    width: min(1000px, 90vw) !important;
+    top: 0 !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .animation-svg-container {
+    width: min(1600px, 95vw) !important;
+  }
+}
+
+.animation-svg-container g {
+  will-change: stroke-dashoffset;
+}
+
+@media (max-width: 768px) {
+  .animation-svg-container g {
+    will-change: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animation-svg-container g {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,708 @@
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+body {
+  background: #f8fafc;
+  color: #1e293b;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  line-height: 1.7;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark body {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.resume-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08),
+    0 10px 10px -5px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(99, 102, 241, 0.05);
+  border: 1px solid #e2e8f0;
+  animation: scale-in 0.6s ease-out;
+}
+
+.dark .resume-container {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid #334155;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3),
+    0 10px 10px -5px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(129, 140, 248, 0.1);
+}
+
+.section-header {
+  color: #64748b;
+  font-weight: 700;
+  font-size: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: none;
+  display: block;
+  position: relative;
+  font-family: "Inter", system-ui, sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.dark .section-header {
+  color: #94a3b8;
+}
+
+.section-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #6366f1, #818cf8);
+  border-radius: 1px;
+}
+
+.back-link {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #475569;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+  font-weight: 500;
+}
+
+.back-link:hover {
+  background: #f8fafc;
+  border-color: #6366f1;
+  color: #6366f1;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.15);
+}
+
+.dark .back-link {
+  background: #1e293b;
+  border-color: #334155;
+  color: #cbd5e1;
+}
+
+.dark .back-link:hover {
+  background: #334155;
+  border-color: #818cf8;
+  color: #818cf8;
+  box-shadow: 0 4px 6px -1px rgba(129, 140, 248, 0.2);
+}
+
+.timeline-item::before {
+  display: none;
+}
+
+.contact-info a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.group:hover .section-header {
+  color: #6366f1;
+  transition: color 0.3s ease;
+}
+
+.dark .group:hover .section-header {
+  color: #818cf8;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced hover effects */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+/* Custom animations for different elements */
+.timeline-item {
+  animation: fade-up 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.timeline-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.timeline-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.timeline-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* Experience timeline styling */
+#experience-container > div {
+  animation: fade-up 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+#experience-container > div:nth-child(1) {
+  animation-delay: 0.1s;
+}
+#experience-container > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+#experience-container > div:nth-child(3) {
+  animation-delay: 0.3s;
+}
+#experience-container > div:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Typography improvements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Enhanced text colors */
+.text-highlight {
+  color: #6366f1;
+  font-weight: 600;
+}
+
+.dark .text-highlight {
+  color: #818cf8;
+}
+
+/* Better link styling */
+a {
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Improved prose styling */
+.prose {
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.dark .prose strong {
+  color: #e2e8f0;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .section-header {
+    font-size: 1.125rem;
+  }
+
+  body {
+    background: white;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Technical Grid Markers */
+.tech-marker {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 50%;
+  z-index: 50;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.dark .tech-marker {
+  background-color: #1e293b;
+  border: 1px solid #475569;
+  box-shadow: 0 0 0 2px rgba(30, 41, 59, 0.5);
+}
+
+/* Infinite Grid Lines */
+.tech-line-h {
+  position: absolute;
+  height: 1px;
+  background-color: #e2e8f0;
+  z-index: 0;
+  pointer-events: none;
+  width: 300vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dark .tech-line-h {
+  background-color: #334155;
+}
+
+.tech-line-v-top {
+  position: absolute;
+  width: 1px;
+  background-color: #e2e8f0;
+  z-index: 0;
+  pointer-events: none;
+  bottom: 100%;
+  height: 100vh;
+}
+
+.dark .tech-line-v-top {
+  background-color: #334155;
+}
+
+.tech-line-v-bottom {
+  position: absolute;
+  width: 1px;
+  background: linear-gradient(to bottom, #e2e8f0, transparent);
+  z-index: 0;
+  pointer-events: none;
+  top: 100%;
+  height: 120px;
+}
+
+.dark .tech-line-v-bottom {
+  background: linear-gradient(to bottom, #334155, transparent);
+}
+
+/* Print Styles - Professional Two-Column Resume Format */
+@media print {
+  @page {
+    size: A4;
+    margin: 1.5cm;
+  }
+
+  /* Hide all decorative elements and back button */
+  .back-link,
+  a[href="index.html"],
+  .tech-marker,
+  .tech-line-h,
+  .tech-line-v-top,
+  .tech-line-v-bottom,
+  footer {
+    display: none !important;
+  }
+
+  /* Hide ONLY elements with print:hidden class (header section) */
+  .print\\:hidden {
+    display: none !important;
+  }
+
+  /* Hide profile image specifically */
+  img[src*="profile-image"] {
+    display: none !important;
+  }
+
+  /* Ensure ALL content sections are visible and displayed */
+  section {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  /* Ensure content div (second div) is visible */
+  main > div > div:nth-child(2),
+  main > div > div:not(.print\\:hidden) {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  /* Ensure main container and content wrapper are visible */
+  main,
+  main > div,
+  main > div > div {
+    visibility: visible !important;
+  }
+
+  /* Ultra simple - remove ALL styling */
+  * {
+    background: white !important;
+    background-color: white !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    border-color: #000000 !important;
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  body {
+    background: white !important;
+    color: #000000 !important;
+    font-size: 9pt !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Main container - simple and clean */
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .resume-container,
+  main > div {
+    background: white !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Sections - no default borders, handled by grid layout */
+  section {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Simple section headers - matching example style */
+  .section-header {
+    color: #000000 !important;
+    font-size: 9pt !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.15em !important;
+    margin-bottom: 0.5rem !important;
+    padding-bottom: 0.3rem !important;
+    border-bottom: 1px solid #000000 !important;
+    display: block !important;
+  }
+
+  .section-header::after {
+    display: none !important;
+  }
+
+  /* Simple typography - matching example */
+  h1 {
+    color: #000000 !important;
+    font-size: 16pt !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.2rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  h2,
+  h3 {
+    color: #000000 !important;
+    font-size: 10pt !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  p,
+  li,
+  span {
+    color: #000000 !important;
+    font-size: 9pt !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Paragraph spacing */
+  p {
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Remove ALL backgrounds and borders */
+  [class*="bg-"],
+  [class*="border"],
+  [class*="rounded"],
+  [class*="shadow"] {
+    background: white !important;
+    background-color: white !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Status badges - just text, no styling */
+  span[class*="bg-"],
+  span[class*="text-"],
+  [class*="status"] {
+    background: white !important;
+    color: #000000 !important;
+    border: none !important;
+    padding: 0 !important;
+    font-size: 9pt !important;
+  }
+
+  /* Experience timeline - simple, no markers */
+  .experience-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Remove timeline completely */
+  .border-l-2,
+  [class*="border-l"] {
+    border-left: none !important;
+    padding-left: 0 !important;
+  }
+
+  /* Remove ALL timeline markers and decorative elements */
+  .experience-item > div[class*="absolute"],
+  [class*="absolute"],
+  [class*="marker"],
+  [class*="timeline"] {
+    display: none !important;
+  }
+
+  /* Simple lists */
+  ul {
+    list-style: disc !important;
+    padding-left: 1.25rem !important;
+    margin: 0.5rem 0 !important;
+  }
+
+  li {
+    color: #000000 !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  li::marker {
+    color: #000000 !important;
+  }
+
+  /* Contact info - simple */
+  a {
+    color: #000000 !important;
+    text-decoration: none !important;
+  }
+
+  /* Skills - no grid, just simple list */
+  #skills-container {
+    border: none !important;
+    display: block !important;
+  }
+
+  #skills-container > div {
+    border: none !important;
+    background: white !important;
+    padding: 0.25rem 0 !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  /* Projects - simple list, no cards */
+  #projects-container {
+    display: block !important;
+  }
+
+  #projects-container > div {
+    border: none !important;
+    background: white !important;
+    padding: 0.5rem 0 !important;
+    margin: 0.5rem 0 !important;
+    display: block !important;
+  }
+
+  /* Education - simple */
+  #education-container > div {
+    border: none !important;
+    background: white !important;
+    padding: 0.5rem 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Remove icon colors */
+  i[class*="fa-"] {
+    color: #000000 !important;
+  }
+
+  /* Images - small and simple */
+  img {
+    max-width: 60px !important;
+    height: auto !important;
+    border: 1px solid #000000 !important;
+    background: white !important;
+  }
+
+  /* Minimal padding everywhere */
+  [class*="p-"],
+  [class*="m-"],
+  [class*="gap-"],
+  [class*="space-"] {
+    padding: 0.5rem 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Contact buttons - just text */
+  [class*="inline-flex"],
+  [class*="flex"] {
+    display: inline !important;
+  }
+
+  /* Two-column professional resume layout - EXACTLY like the example */
+  /* Example: Left (white) = PROFILE + WORK EXPERIENCE, Right (gray) = EDUCATION + SKILLS */
+
+  /* Content wrapper - create two columns */
+  main > div > div:nth-child(2) {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0 !important;
+    width: 100% !important;
+    align-items: start !important;
+  }
+
+  /* Left column (50% width, WHITE background) - PROFILE + WORK EXPERIENCE */
+  /* Section 1: Professional Summary (PROFILE) */
+  section:nth-of-type(1) {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    background: white !important;
+    padding: 0.7cm 0.8cm !important;
+    border-right: 1px solid #000000 !important;
+    border-bottom: 1px solid #d0d0d0 !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Section 3: Experience (WORK EXPERIENCE) */
+  section:nth-of-type(3) {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    background: white !important;
+    padding: 0.7cm 0.8cm !important;
+    border-right: 1px solid #000000 !important;
+    border-bottom: none !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Right column (50% width, LIGHT GRAY background) - EDUCATION + SKILLS */
+  /* Section 5: Education */
+  section:nth-of-type(5) {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    background: #f5f5f5 !important;
+    padding: 0.7cm 0.8cm !important;
+    border-bottom: 1px solid #d0d0d0 !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Section 2: Technical Skills (SKILLS) */
+  section:nth-of-type(2) {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    background: #f5f5f5 !important;
+    padding: 0.7cm 0.8cm !important;
+    border-bottom: none !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Hide Featured Projects section in print */
+  section:nth-of-type(4) {
+    display: none !important;
+  }
+
+  /* Skills in left column - simple vertical list */
+  #skills-container {
+    display: block !important;
+    grid-template-columns: none !important;
+    border: none !important;
+  }
+
+  #skills-container > div {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 0.4rem !important;
+    padding: 0.3rem 0 !important;
+    border: none !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    background: transparent !important;
+  }
+
+  /* Compact project cards */
+  #projects-container > div {
+    margin-bottom: 0.4rem !important;
+    padding: 0.3rem 0 !important;
+  }
+
+  /* Compact education */
+  #education-container > div {
+    padding: 0.3rem 0 !important;
+    margin: 0 !important;
+  }
+
+  /* All text black */
+  .text-slate-900,
+  .text-slate-800,
+  .text-slate-700,
+  .text-slate-600,
+  .text-slate-500,
+  .text-slate-400,
+  .text-slate-300,
+  .dark .text-slate-900,
+  .dark .text-slate-100 {
+    color: #000000 !important;
+  }
+
+  .text-indigo-600,
+  .text-indigo-500,
+  .text-indigo-400 {
+    color: #000000 !important;
+  }
+}

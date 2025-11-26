@@ -1,0 +1,298 @@
+/* Modern CSS for Professional Portfolio */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+/* Enhanced keyframes for modern animations */
+@keyframes gradient-x {
+  0%,
+  100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(3deg);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 45, 32, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(255, 45, 32, 0.6);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-up {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Typing animation styles */
+.typing-animation {
+  font-size: clamp(0.875rem, 2.5vw, 1.2rem);
+  color: rgba(100, 116, 139, 0.8);
+  font-weight: 500;
+  margin: 0;
+  min-height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2px;
+}
+
+@media (max-width: 768px) {
+  .typing-animation {
+    justify-content: flex-start;
+    font-size: clamp(0.75rem, 3vw, 1rem);
+  }
+}
+
+.typing-text {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.cursor {
+  font-weight: 300;
+  color: rgba(99, 102, 241, 0.9); /* match primary indigo tone */
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Ensure proper text colors */
+body {
+  color: #1e293b;
+}
+
+/* Technical Grid Markers */
+.tech-marker {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 50%;
+  z-index: 50;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Infinite Grid Lines */
+.tech-line-h {
+  position: absolute;
+  height: 1px;
+  background-color: #e2e8f0;
+  z-index: 0;
+  pointer-events: none;
+  width: 300vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tech-line-v-top {
+  position: absolute;
+  width: 1px;
+  background-color: #e2e8f0;
+  z-index: 0;
+  pointer-events: none;
+  bottom: 100%;
+  height: 100vh;
+}
+
+.tech-line-v-bottom {
+  position: absolute;
+  width: 1px;
+  background: linear-gradient(to bottom, #e2e8f0, transparent);
+  z-index: 0;
+  pointer-events: none;
+  top: 100%;
+  height: 120px;
+}
+
+/* Dark Mode Support */
+.dark .tech-line-h,
+.dark .tech-line-v-top,
+.dark .tech-line-v-bottom {
+  background-color: #334155;
+}
+
+.dark .tech-line-v-bottom {
+  background: linear-gradient(to bottom, #334155, transparent);
+}
+
+.dark .tech-marker {
+  background-color: #1e293b;
+  border-color: #475569;
+  box-shadow: 0 0 0 2px rgba(30, 41, 59, 0.5);
+}
+
+.dark body {
+  color: #e2e8f0;
+}
+
+.dark .typing-animation {
+  color: rgba(203, 213, 225, 0.8);
+}
+
+.dark .cursor {
+  color: rgba(129, 140, 248, 0.9);
+}
+
+/* Shared section headers (landing + resume) for visual consistency */
+.section-header {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: #64748b;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.dark .section-header {
+  color: #94a3b8;
+}
+
+.section-header::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-end: 0;
+  width: 2.75rem;
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #6366f1, #ec4899);
+  opacity: 0.9;
+}
+
+/* Screen reader accessibility utility */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Circuit Lines Animation */
+.ant-circuit-lines path {
+  stroke-dasharray: 10, 10;
+  animation: circuitDash 15s linear infinite;
+  vector-effect: non-scaling-stroke;
+}
+
+@keyframes circuitDash {
+  to {
+    stroke-dashoffset: -200;
+  }
+}
+
+/* Enhanced hover effects for skills */
+@keyframes skillPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Smooth transitions for interactive elements */
+a,
+button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced profile image glow */
+.profile-image-wrapper {
+  position: relative;
+}
+
+.profile-image-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #6366f1, #ec4899, #6366f1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.profile-image-wrapper:hover::before {
+  opacity: 0.3;
+}
+
+/* Enhanced section spacing */
+section,
+.section {
+  scroll-margin-top: 2rem;
+}
+
+/* Accessibility: Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .ant-circuit-lines path {
+    animation: none !important;
+    stroke-dasharray: none !important;
+    stroke-dashoffset: 0 !important;
+    opacity: 0.6 !important;
+  }
+}
