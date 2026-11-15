@@ -7,7 +7,7 @@ const projectsData = [
     category: "Software Solutions Platform",
     status: "Live",
     description:
-      "Official website for KrupYang Digital Ecosystem. Built with a custom CMS block engine and 3-language localization (Khmer, English, Chinese).",
+      "Corporate website for KrupYang Digital Ecosystem. Built dynamic page blocks and 3-language support (Khmer, English, Chinese) so the team can update content without writing code.",
     technologies: [
       "Laravel",
       "Inertia.js",
@@ -23,7 +23,7 @@ const projectsData = [
     category: "Parental Control SaaS",
     status: "Live",
     description:
-      "Parental control platform for managing children's screen time. Built subscription billing, app blocking schedule rules, and real-time location tracking APIs.",
+      "Parental control app for managing screen time. Built subscription billing, app-blocking schedule rules, and real-time location tracking APIs.",
     technologies: [
       "PHP",
       "Node.js",
@@ -38,7 +38,7 @@ const projectsData = [
     category: "School Management Platform",
     status: "Live",
     description:
-      "Platform for partner schools to manage collaboration. Built custom features for course and student management with Tailwind UI.",
+      "School collaboration platform. Developed custom modules for student enrollment, course management, and clean user dashboards.",
     technologies: [
       "Laravel",
       "Vue.js",
@@ -66,7 +66,7 @@ const projectsData = [
     category: "Higher Education Management",
     status: "Live",
     description:
-      "Comprehensive education system to manage university student records, academic history, and institutional analytics dashboards.",
+      "National higher education portal managing university student records, academic history, and administrative reports.",
     technologies: [
       "Laravel",
       "Laravel Modules",
