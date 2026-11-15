@@ -91,6 +91,8 @@
           "skills": "Laravel, Vue.js, PHP, JavaScript, Tailwind CSS, MySQL, Git, API Development"
         },
         "sameAs": [
+          "https://krupyang.com",
+          "https://digital.krupyang.com",
           "https://github.com/lisoingsem",
           "https://web.facebook.com/lisoingsuperbig",
           "https://www.linkedin.com/in/lisoing-sem-443511262",
@@ -500,6 +502,45 @@
           </div>
         </div>
 
+        <!-- Featured Projects Section -->
+        <div
+          class="p-8 sm:p-10 lg:p-12 border-t border-slate-200 dark:border-slate-700 relative"
+        >
+          <!-- Horizontal Line Extension -->
+          <div class="tech-line-h top-[-1px]"></div>
+          <div class="tech-line-h bottom-[-1px]"></div>
+
+          <!-- Intersections -->
+          <div class="tech-marker -top-[4px] -left-[4px]"></div>
+          <div class="tech-marker -top-[4px] -right-[4px]"></div>
+          <div class="tech-marker -bottom-[4px] -left-[4px]"></div>
+          <div class="tech-marker -bottom-[4px] -right-[4px]"></div>
+
+          <div>
+            <div class="flex items-center justify-between mb-8">
+              <h2
+                class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest"
+              >
+                Featured Projects
+              </h2>
+              <a
+                href="resume.html#projects-container"
+                class="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors"
+              >
+                <span>View all in Resume</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+
+            <div
+              id="projects-container"
+              class="grid grid-cols-1 sm:grid-cols-2 gap-4"
+            >
+              <!-- Projects rendered dynamically by projects.js -->
+            </div>
+          </div>
+        </div>
+
         <!-- Statistics Section - By The Numbers -->
         <div
           class="p-8 sm:p-10 lg:p-12 border-t border-slate-200 dark:border-slate-700 relative"
@@ -560,7 +601,7 @@
                 <div
                   class="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 dark:text-slate-100 mb-2"
                 >
-                  10+
+                  12+
                 </div>
                 <div
                   class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider"
@@ -653,6 +694,8 @@
     <!-- Enhanced JavaScript for interactivity and animation -->
     <script src="assets/js/config.js"></script>
     <script src="assets/js/data/contact-data.js"></script>
+    <script src="assets/js/data/projects-data.js"></script>
+    <script src="assets/js/projects.js"></script>
     <script src="assets/js/typing.js"></script>
     <script src="assets/js/stack.js"></script>
     <script src="assets/js/contact.js"></script>

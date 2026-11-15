@@ -6,6 +6,14 @@ const DARK_MODE = "dark"; // Change to 'light' for light mode
 // Stack inventory is in stack.js
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Render featured projects if container exists
+  if (
+    typeof window.renderProjects === "function" &&
+    document.getElementById("projects-container")
+  ) {
+    window.renderProjects("projects-container", window.projectsData);
+  }
+
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {

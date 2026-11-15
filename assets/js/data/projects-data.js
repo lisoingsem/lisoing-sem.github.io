@@ -1,8 +1,42 @@
 // Projects Data
 // Reusable projects data for resume and other pages
-// Updated from https://lisoing-sem.vercel.app/
 
 const projectsData = [
+  {
+    title: "KrupYang",
+    category: "Digital Agency & Multi-Service Platform",
+    status: "Live",
+    description:
+      "Modern full-stack digital agency and business services ecosystem built with enterprise architecture. Features multilingual localization (Khmer, English, Chinese), dynamic CMS block management, service discovery, and client consultation workflows.",
+    technologies: [
+      "Laravel",
+      "Inertia.js",
+      "Vue.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "Vite",
+      "PHP",
+      "MySQL",
+    ],
+    url: "https://krupyang.com/",
+  },
+  {
+    title: "Digital KrupYang",
+    category: "Digital Products & E-Commerce Platform",
+    status: "Live",
+    description:
+      "Automated digital marketplace delivering instant digital asset fulfillment, customer digital wallet management, integrated payment gateways (Bakong KHQR, Cutluy, PayWay), seamless checkout flows, and automated license distribution.",
+    technologies: [
+      "Laravel",
+      "Inertia.js",
+      "Vue.js",
+      "Tailwind CSS",
+      "Digital Wallet",
+      "Payment Gateways",
+      "API Architecture",
+    ],
+    url: "https://digital.krupyang.com/",
+  },
   {
     title: "NetBlock",
     category: "Parental Control & Digital Wellbeing Platform",
@@ -34,7 +68,7 @@ const projectsData = [
       "Feature Development",
       "Customization",
     ],
-    url: "https://dev.edupartner.app/",
+    url: "https://www.edupartner.app/",
   },
   {
     title: "Cambodia Tourism Association",
