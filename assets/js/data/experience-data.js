@@ -1,19 +1,18 @@
 // Experience Data
 // Reusable experience data for resume and other pages
-// Updated from https://lisoing-sem.vercel.app/
 
 const experienceData = [
   {
     title: "Backend Developer — Skylink Technologies",
-    period: "Jun 2024 – Present",
-    status: "Current",
+    period: "Jun 2024 – Mar 2026",
+    status: "Completed",
     statusClass:
-      "bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400 border-green-100 dark:border-green-800",
+      "bg-slate-900/50 dark:bg-slate-800/50 text-slate-300 dark:text-slate-300 border-slate-700/30 dark:border-slate-600/30",
     responsibilities: [
-      "Leading backend initiatives across cloud and automation projects.",
-      "Building secure APIs, modernizing data architecture, and collaborating with cross-functional teams.",
-      "Delivering scalable business solutions for enterprise clients.",
-      "Working with Node.js, API Architecture, Database Design, and Cloud Solutions.",
+      "Built RESTful APIs and background queue workers for cloud and automation services.",
+      "Designed MySQL database tables and optimized slow database queries.",
+      "Integrated third-party APIs and handled webhook payment callbacks.",
+      "Collaborated with team members to deploy updates and maintain server uptime.",
     ],
   },
   {
@@ -23,23 +22,21 @@ const experienceData = [
     statusClass:
       "bg-slate-900/50 dark:bg-slate-800/50 text-slate-300 dark:text-slate-300 border-slate-700/30 dark:border-slate-600/30",
     responsibilities: [
-      "Improved features on an education platform using Laravel Modules and Vue3 for development.",
-      "Working closely with clients to meet specific requirements and delivering high-quality solutions.",
-      "Collaborated with cross-functional teams to enhance platform functionality.",
-      "Focused on UI/UX improvements and feature development for better user experience.",
+      "Developed modular platform features using Laravel Modules and Vue 3.",
+      "Worked directly with school clients to build requested features and fix bugs.",
+      "Built clean, responsive, mobile-friendly user interfaces using Tailwind CSS.",
     ],
   },
   {
     title: "Freelance Full-Stack Developer — Remote",
     period: "2022 – Present",
-    status: "Current",
+    status: "Active",
     statusClass:
-      "bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400 border-green-100 dark:border-green-800",
+      "bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 border-emerald-200 dark:border-emerald-800",
     responsibilities: [
-      "Built responsive web applications with Laravel & Vue.js.",
-      "Created APIs and improved app performance.",
-      "Delivered custom solutions directly to clients while applying best practices.",
-      "Enhanced code quality, security, and performance across multiple projects.",
+      "Built client web applications from scratch using Laravel, Vue.js, and MySQL.",
+      "Integrated Cambodian payment gateways: Bakong KHQR and ABA PayWay.",
+      "Deployed websites to Linux servers with Nginx, SSL certificates, and Cloudflare.",
     ],
   },
   {
@@ -49,10 +46,8 @@ const experienceData = [
     statusClass:
       "bg-slate-900/50 dark:bg-slate-800/50 text-slate-300 dark:text-slate-300 border-slate-700/30 dark:border-slate-600/30",
     responsibilities: [
-      "Built and cloned responsive websites using Laravel & Tailwind CSS.",
-      "Worked with QA and senior developers to test and improve features.",
-      "Developed custom solutions for an Advertising Agency based on client needs.",
-      "Focused on responsive design and modern UI/UX principles.",
+      "Built and styled responsive web pages using Laravel Blade and Tailwind CSS.",
+      "Fixed responsive layout bugs across mobile and desktop browsers.",
     ],
   },
 ];

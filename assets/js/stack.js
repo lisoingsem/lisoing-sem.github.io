@@ -1,97 +1,52 @@
 /**
  * Stack Inventory Rendering
- *
- * Dynamically renders the stack inventory skills with brand-colored hover effects.
- * Matches mrpunyapal.dev style exactly.
+ * Dynamically renders stack inventory skills with brand-colored hover glows.
  */
 
-// Stack Inventory - Easy to add/remove skills
 const STACKS = [
-  "PHP",
-  "Laravel",
-  "Vue.js",
-  "Tailwind",
-  "JavaScript",
-  "MySQL",
-  "Git",
-  "Node.js",
-  "Express",
-  "API",
+  { name: "Laravel", color: "#FF2D20", icon: "fab fa-laravel" },
+  { name: "Vue.js", color: "#4FC08D", icon: "fab fa-vuejs" },
+  { name: "PHP", color: "#777BB4", icon: "fab fa-php" },
+  { name: "Inertia.js", color: "#9553E9", icon: "fa-solid fa-layer-group" },
+  { name: "TypeScript", color: "#3178C6", icon: "fa-solid fa-code" },
+  { name: "Tailwind CSS", color: "#06B6D4", icon: "fa-solid fa-wind" },
+  { name: "MySQL", color: "#4479A1", icon: "fa-solid fa-database" },
+  { name: "REST APIs", color: "#10B981", icon: "fa-solid fa-network-wired" },
+  { name: "Node.js", color: "#339933", icon: "fab fa-node-js" },
+  { name: "Git", color: "#F05032", icon: "fab fa-git-alt" },
 ];
 
-// Skill hover colors mapping - brand colors for visual appeal
-const SKILL_HOVER_COLORS = {
-  PHP: "#777BB4",
-  Laravel: "#FF2D20",
-  "Vue.js": "#4FC08D",
-  Tailwind: "#06B6D4",
-  JavaScript: "#F7DF1E",
-  MySQL: "#4479A1",
-  Git: "#F05032",
-  "Node.js": "#339933",
-  // Express and API use default primary color
-};
-
-// CSS class constants
-const CARD_BASE_CLASSES =
-  "p-3 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-center group transition-all duration-300 rounded hover:shadow-sm hover:shadow-slate-200/50 dark:hover:shadow-slate-900/50 w-full";
-const TEXT_BASE_CLASSES =
-  "text-xs font-semibold text-slate-700 dark:text-slate-200 transition-colors block";
-const DEFAULT_HOVER_BORDER = "hover:border-primary-500";
-const DEFAULT_HOVER_TEXT =
-  "group-hover:text-primary-500 dark:group-hover:text-primary-500";
-
-/**
- * Creates a skill card HTML element
- * @param {string} skill - The skill name
- * @param {string|null} hoverColor - The hover color hex code, or null for default
- * @returns {string} HTML string for the skill card
- */
-const createSkillCard = (skill, hoverColor) => {
-  if (hoverColor) {
-    // Use inline style for custom colors
-    return `
-      <div class="${CARD_BASE_CLASSES}" style="--hover-color: ${hoverColor};" onmouseenter="this.style.borderColor='${hoverColor}'; this.querySelector('span').style.color='${hoverColor}';" onmouseleave="this.style.borderColor=''; this.querySelector('span').style.color='';">
-        <span class="${TEXT_BASE_CLASSES}">${skill}</span>
-      </div>
-    `;
-  } else {
-    // Use default Tailwind classes
-    return `
-      <div class="${CARD_BASE_CLASSES} ${DEFAULT_HOVER_BORDER}">
-        <span class="${TEXT_BASE_CLASSES} ${DEFAULT_HOVER_TEXT}">${skill}</span>
-      </div>
-    `;
-  }
-};
-
-/**
- * Renders the stack inventory into the container
- */
 const renderStackInventory = () => {
   const container = document.getElementById("stack-inventory-container");
-  if (!container) {
-    console.warn("Stack inventory container not found");
-    return;
-  }
+  if (!container) return;
 
-  const cards = STACKS.map((skill) => {
-    const hoverColor = SKILL_HOVER_COLORS[skill] || null;
-    return createSkillCard(skill, hoverColor);
-  });
-
-  container.innerHTML = cards.join("");
+  container.innerHTML = STACKS.map(
+    (item) => `
+    <div
+      class="p-3 sm:p-3.5 bg-white/80 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80 rounded-xl flex items-center gap-2.5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md cursor-default group"
+      onmouseenter="this.style.borderColor='${item.color}'; this.style.boxShadow='0 8px 20px -6px ${item.color}40';"
+      onmouseleave="this.style.borderColor=''; this.style.boxShadow='';"
+    >
+      <div
+        class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-transform group-hover:scale-110"
+        style="background-color: ${item.color}15; color: ${item.color};"
+      >
+        <i class="${item.icon} text-sm"></i>
+      </div>
+      <span class="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover:text-slate-950 dark:group-hover:text-white transition-colors">
+        ${item.name}
+      </span>
+    </div>
+  `
+  ).join("");
 };
 
-// Auto-initialize when DOM is ready
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", renderStackInventory);
 } else {
-  // DOM already loaded
   renderStackInventory();
 }
 
-// Export for potential external use
 if (typeof window !== "undefined") {
   window.renderStackInventory = renderStackInventory;
 }

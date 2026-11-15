@@ -1,706 +1,485 @@
 <!DOCTYPE html>
-<html lang="en" class="overflow-x-hidden transition-colors duration-300">
+<html lang="en" class="dark scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lisoing Sem | Full Stack Developer | Portfolio</title>
+    <title>Lisoing Sem — Full-Stack Software Engineer</title>
 
-    <!-- Performance and Security -->
+    <!-- SEO & Metadata -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#06B6D4" />
-    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
-
-    <!-- Primary Meta Tags -->
-    <meta name="title" content="Lisoing Sem | Full Stack Developer" />
+    <meta name="theme-color" content="#090d16" />
+    <meta name="author" content="Lisoing Sem" />
     <meta
       name="description"
-      content="Full Stack Web Developer specializing in Laravel, Vue.js, and modern web technologies. Passionate about creating exceptional digital experiences through clean code and innovative design."
+      content="Full-Stack Software Engineer based in Cambodia. Building web applications with Laravel, Vue.js, Inertia.js, and Bakong KHQR / ABA PayWay payment integrations."
     />
     <meta
       name="keywords"
-      content="Full Stack Developer, Laravel Developer, PHP Expert, Vue.js Developer, Web Development, Portfolio, Freelancer, Tailwind CSS, JavaScript, Cambodia"
+      content="Lisoing Sem, Full Stack Developer, Software Engineer, Laravel, Vue.js, Inertia.js, Bakong KHQR, ABA PayWay, Cambodia Developer"
     />
-    <meta name="author" content="Lisoing Sem" />
-    <meta name="creator" content="Lisoing Sem" />
-    <meta name="publisher" content="Lisoing Sem" />
-    <meta name="subject" content="Web Development and Programming" />
-    <meta name="category" content="Technology, Web Development, Programming" />
-    <meta name="coverage" content="Worldwide" />
-    <meta name="distribution" content="Global" />
-    <meta name="rating" content="General" />
-    <meta name="revisit-after" content="7 days" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://lisoingsem.github.io/" />
-    <meta property="og:title" content="Lisoing Sem | Full Stack Developer" />
-    <meta
-      property="og:description"
-      content="Full Stack Web Developer specializing in Laravel, Vue.js, and modern web technologies. Passionate about creating exceptional digital experiences."
-    />
-    <meta
-      property="og:image"
-      content="https://lisoingsem.github.io/assets/images/profile-image.jpg"
-    />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="Lisoing Sem - Full Stack Developer"
-    />
-    <meta property="og:site_name" content="Lisoing Sem" />
-    <meta property="og:locale" content="en_US" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://lisoingsem.github.io/" />
-    <meta name="twitter:title" content="Lisoing Sem | Full Stack Developer" />
-    <meta
-      name="twitter:description"
-      content="Full Stack Web Developer specializing in Laravel, Vue.js, and modern web technologies."
-    />
-    <meta
-      name="twitter:image"
-      content="https://lisoingsem.github.io/assets/images/profile-image.jpg"
-    />
-    <meta
-      name="twitter:image:alt"
-      content="Lisoing Sem - Full Stack Developer"
-    />
-
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Lisoing Sem",
-        "jobTitle": "Full Stack Developer",
-        "description": "Full Stack Web Developer specializing in Laravel, Vue.js, and modern web technologies. Passionate about creating exceptional digital experiences.",
-        "url": "https://lisoingsem.github.io",
-        "image": "https://lisoingsem.github.io/assets/images/profile-image.jpg",
-        "alternateName": ["Lisoing", "Full Stack Developer"],
-        "hasOccupation": {
-          "@type": "Occupation",
-          "name": "Full-Stack Developer",
-          "occupationLocation": {
-            "@type": "Country",
-            "name": "Cambodia"
-          },
-          "skills": "Laravel, Vue.js, PHP, JavaScript, Tailwind CSS, MySQL, Git, API Development"
-        },
-        "sameAs": [
-          "https://krupyang.com",
-          "https://digital.krupyang.com",
-          "https://github.com/lisoingsem",
-          "https://web.facebook.com/lisoingsuperbig",
-          "https://www.linkedin.com/in/lisoing-sem-443511262",
-          "https://t.me/lisoingsem"
-        ],
-        "knowsAbout": [
-          "Laravel Framework",
-          "PHP Programming",
-          "JavaScript Development",
-          "Web Development",
-          "Vue.js",
-          "Tailwind CSS",
-          "API Development",
-          "Full Stack Development"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "KH"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "lisoingsem@gmail.com",
-          "contactType": "professional"
-        }
-      }
-    </script>
-
-    <!-- Favicon and Icons -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <meta name="msapplication-TileColor" content="#06B6D4" />
-
-    <!-- Preload critical resources -->
-    <link
-      rel="preload"
-      href="assets/images/profile-image.jpg"
-      as="image"
-      type="image/jpeg"
-      fetchpriority="high"
-    />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      as="style"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-
-    <!-- Resource Hints for better performance -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://lisoingsem.github.io/" />
 
-    <!-- Enhanced meta tags for better SEO -->
-    <meta name="geo.region" content="KH" />
-    <meta name="geo.placename" content="Cambodia" />
-    <meta name="rating" content="general" />
-    <meta name="referrer" content="no-referrer-when-downgrade" />
-    <meta name="format-detection" content="telephone=no" />
-
-    <!-- Additional SEO Meta Tags -->
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="MobileOptimized" content="320" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lisoingsem.github.io/" />
+    <meta property="og:title" content="Lisoing Sem — Full-Stack Software Engineer" />
     <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
+      property="og:description"
+      content="Full-Stack Software Engineer based in Cambodia. Building web applications with Laravel, Vue.js, and payment integrations."
     />
-    <meta name="apple-mobile-web-app-title" content="Lisoing Sem" />
-    <meta
-      name="application-name"
-      content="Lisoing Sem - Full Stack Developer"
-    />
+    <meta property="og:image" content="https://lisoingsem.github.io/assets/images/profile-image.jpg" />
+    <meta property="og:site_name" content="Lisoing Sem" />
 
-    <!-- Language alternatives -->
-    <link rel="alternate" hreflang="en" href="https://lisoingsem.github.io/" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://lisoingsem.github.io/" />
+    <meta name="twitter:title" content="Lisoing Sem — Full-Stack Software Engineer" />
+    <meta
+      name="twitter:description"
+      content="Full-Stack Software Engineer based in Cambodia. Building web applications with Laravel, Vue.js, and payment integrations."
+    />
+    <meta name="twitter:image" content="https://lisoingsem.github.io/assets/images/profile-image.jpg" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://lisoingsem.github.io/"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      crossorigin="anonymous"
     />
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      // Wait for Tailwind to load before configuring
-      function configureTailwind() {
-        if (typeof tailwind !== "undefined") {
-          tailwind.config = {
-            darkMode: "class",
-            theme: {
-              extend: {
-                colors: {
-                  primary: {
-                    50: "#eef2ff",
-                    100: "#e0e7ff",
-                    500: "#6366f1",
-                    600: "#4f46e5",
-                    700: "#4338ca",
-                    900: "#312e81",
-                  },
-                  accent: {
-                    50: "#fdf2f8",
-                    100: "#fce7f3",
-                    500: "#ec4899",
-                    600: "#db2777",
-                    700: "#be185d",
-                  },
-                },
-                fontFamily: {
-                  sans: ["Inter", "system-ui", "sans-serif"],
-                  display: ["Inter", "system-ui", "sans-serif"],
-                },
-                animation: {
-                  float: "float 6s ease-in-out infinite",
-                  glow: "glow 2s ease-in-out infinite alternate",
-                  "fade-up": "fade-up 0.6s ease-out",
-                  "scale-up": "scale-up 0.3s ease-out",
-                },
-                backdropBlur: {
-                  xs: "2px",
-                },
-              },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
             },
-          };
-        } else {
-          // Retry if Tailwind hasn't loaded yet
-          setTimeout(configureTailwind, 100);
-        }
-      }
-      // Start configuration
-      configureTailwind();
+          },
+        },
+      };
     </script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="assets/css/app.css" />
+
+    <!-- Clean Landing Styles -->
     <link rel="stylesheet" href="assets/css/landing.css" />
 
-    <!-- Performance hints -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+    <!-- Dark Mode Init -->
+    <script src="assets/js/dark-mode.js"></script>
   </head>
 
-  <body
-    class="font-sans m-0 p-0 min-h-screen bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 leading-relaxed relative overflow-x-hidden antialiased transition-colors duration-300"
-  >
-    <!-- Hero Section with Animation Background -->
-    <main
-      class="min-h-screen flex flex-col items-center justify-center p-4 sm:p-8 gap-8 text-slate-900 dark:text-slate-100"
-    >
-      <div
-        class="w-full max-w-6xl border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md relative z-10 transition-all duration-300"
-      >
-        <!-- Tech Markers: Corners -->
-        <div class="tech-marker -top-[4px] -left-[4px]"></div>
-        <div class="tech-marker -top-[4px] -right-[4px]"></div>
-        <div class="tech-marker -bottom-[4px] -left-[4px]"></div>
-        <div class="tech-marker -bottom-[4px] -right-[4px]"></div>
+  <body class="bg-white dark:bg-[#090d16] text-slate-800 dark:text-slate-200 antialiased min-h-screen transition-colors duration-200">
+    
+    <!-- Clean, Focused Main Column -->
+    <div class="max-w-2xl mx-auto px-6 py-12 sm:py-20">
 
-        <!-- Global Extensions -->
-        <div class="tech-line-h top-[-1px]"></div>
-        <div class="tech-line-h bottom-[-1px]"></div>
+      <!-- TOP NAV -->
+      <nav class="flex items-center justify-between pb-12 border-b border-slate-100 dark:border-slate-800/80">
+        <a href="#top" class="text-sm font-bold tracking-tight text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+          lisoing.dev
+        </a>
 
-        <div class="tech-line-v-top left-[-1px]"></div>
-        <div class="tech-line-v-top right-[-1px]"></div>
-
-        <div class="tech-line-v-bottom left-[-1px]"></div>
-        <div class="tech-line-v-bottom right-[-1px]"></div>
-
-        <!-- Navigation Links - Top Right -->
-        <div
-          class="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 flex items-center gap-2"
-        >
+        <div class="flex items-center gap-4 text-xs font-medium text-slate-600 dark:text-slate-400">
+          <a href="#projects" class="hover:text-slate-900 dark:hover:text-white transition-colors">Projects</a>
+          <a href="#experience" class="hover:text-slate-900 dark:hover:text-white transition-colors">Experience</a>
           <a
             href="resume.html"
-            class="inline-flex h-7 sm:h-8 items-center justify-center rounded-full bg-gradient-to-r from-indigo-500 to-indigo-600 text-white px-3 sm:px-3.5 text-[11px] sm:text-xs font-semibold shadow-sm shadow-indigo-500/30 transition-all hover:from-indigo-600 hover:to-indigo-700 hover:shadow-md hover:shadow-indigo-500/40 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-1"
+            class="text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1 font-semibold"
           >
-            <i class="fa-solid fa-file-alt mr-1.5 text-[10px] sm:text-xs"></i>
-            Resume
+            <span>Resume</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
           </a>
+
+          <!-- Theme Toggle Button -->
+          <button
+            type="button"
+            id="theme-toggle-btn"
+            aria-label="Toggle theme"
+            class="w-7 h-7 rounded-md flex items-center justify-center text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          >
+            <i class="fa-solid fa-sun text-amber-500 text-xs hidden dark:inline"></i>
+            <i class="fa-solid fa-moon text-indigo-500 text-xs dark:hidden"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- INTRO / HEADER -->
+      <header id="top" class="pt-10 pb-12">
+        <!-- Live Status -->
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60 mb-5">
+          <span class="status-dot"></span>
+          <span>Available for full-time & freelance roles</span>
+        </div>
+
+        <div class="flex items-start justify-between gap-6">
+          <div>
+            <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+              Lisoing Sem
+            </h1>
+            <p class="text-sm sm:text-base font-medium text-slate-500 dark:text-slate-400 mt-1">
+              Full-Stack Software Engineer
+            </p>
+          </div>
+
+          <img
+            src="assets/images/profile-image.jpg"
+            alt="Lisoing Sem"
+            class="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-2 border-slate-200 dark:border-slate-700 shadow-sm shrink-0"
+          />
+        </div>
+
+        <!-- Honest, Human Pitch -->
+        <p class="mt-5 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+          I'm a full-stack developer based in Phnom Penh with <strong class="text-slate-900 dark:text-white">2 years of professional experience</strong>. I build web applications and APIs using <strong class="text-slate-900 dark:text-white">Laravel</strong>, <strong class="text-slate-900 dark:text-white">Vue.js</strong>, and <strong class="text-slate-900 dark:text-white">Tailwind CSS</strong>. Most of my work involves backend architecture, MySQL database design, and integrating Cambodian payment gateways (<strong class="text-slate-900 dark:text-white">Bakong KHQR</strong>, <strong class="text-slate-900 dark:text-white">ABA PayWay</strong>).
+        </p>
+
+        <p class="mt-3 text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+          Previously Backend Developer at <strong class="text-slate-800 dark:text-slate-200">Skylink Technologies</strong> (ended March 2026) and Full-Stack Developer at <strong class="text-slate-800 dark:text-slate-200">Durable Techs</strong>.
+        </p>
+
+        <!-- Direct Social / Contact Links -->
+        <div class="mt-6 flex flex-wrap items-center gap-2.5 text-xs">
+          <a
+            href="https://t.me/lisoingsem"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 transition-colors font-medium"
+          >
+            <i class="fab fa-telegram text-[#26A5E4]"></i>
+            <span>Telegram</span>
+          </a>
+
+          <a
+            href="mailto:lisoingsem@gmail.com"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 transition-colors font-medium"
+          >
+            <i class="fa-solid fa-envelope text-red-500"></i>
+            <span>lisoingsem@gmail.com</span>
+          </a>
+
           <a
             href="https://github.com/lisoingsem"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex h-7 sm:h-8 w-7 sm:w-8 items-center justify-center rounded-full border border-slate-300 dark:border-slate-600 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm text-slate-700 dark:text-slate-200 shadow-sm transition-all hover:bg-slate-100 dark:hover:bg-slate-700 hover:border-indigo-400 dark:hover:border-indigo-500 hover:scale-105 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-1"
-            aria-label="GitHub"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 transition-colors font-medium"
           >
-            <i class="fab fa-github text-[10px] sm:text-xs"></i>
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/lisoing-sem-443511262"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 transition-colors font-medium"
+          >
+            <i class="fab fa-linkedin text-[#0077b5]"></i>
+            <span>LinkedIn</span>
           </a>
         </div>
+      </header>
 
-        <!-- Hero Section -->
-        <div
-          id="hero-section"
-          class="relative overflow-hidden py-12 md:py-16 lg:py-20 px-6 sm:px-8 border-b border-slate-200 dark:border-slate-700"
-        >
-          <!-- Animated Background -->
-          <div
-            class="animation-svg-container pointer-events-none absolute left-1/2 z-1 -translate-x-1/2 opacity-40 sm:opacity-50 md:opacity-60 dark:opacity-30 sm:dark:opacity-40 md:dark:opacity-40"
-            style="top: -3%; width: min(800px, 100vw); height: auto"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 1512 527"
-              preserveAspectRatio="xMidYMid meet"
-              class="h-auto w-full"
-              style="
-                transform: translate3d(0px, 0px, 0px);
-                content-visibility: visible;
-                will-change: transform;
-                display: block;
-              "
-            >
-              <defs>
-                <clipPath id="__lottie_element_2">
-                  <rect width="1512" height="527" x="0" y="0"></rect>
-                </clipPath>
-                <!-- Gradient definitions will be inserted by JavaScript -->
-              </defs>
-              <g clip-path="url(#__lottie_element_2)">
-                <!-- Path elements will be inserted by JavaScript -->
-              </g>
-            </svg>
-          </div>
+      <!-- FEATURED LIVE PROJECTS -->
+      <section id="projects" class="py-8 border-t border-slate-100 dark:border-slate-800/80">
+        <div class="flex items-baseline justify-between mb-6">
+          <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+            Selected Live Projects
+          </h2>
+          <span class="text-xs text-slate-400 dark:text-slate-500">In Production</span>
+        </div>
 
-          <!-- Hero Content -->
-          <div
-            class="relative z-20 flex w-full flex-col items-center justify-start text-center"
-          >
-            <!-- Profile Photo with Circuit Lines -->
-            <div class="mb-6 sm:mb-8 relative">
-              <!-- Circuit Lines Animation -->
-              <div
-                class="absolute inset-0 z-0 opacity-30 dark:opacity-20 pointer-events-none overflow-hidden"
-              >
-                <svg
-                  class="w-full h-full"
-                  viewBox="0 0 400 400"
-                  xmlns="http://www.w3.org/2000/svg"
+        <div class="space-y-4">
+          
+          <!-- 1. KrupYang -->
+          <div class="clean-card p-4 sm:p-5 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white dark:bg-slate-900/40">
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <div>
+                <a
+                  href="https://krupyang.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group text-sm sm:text-base font-bold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center gap-1.5"
                 >
-                  <defs>
-                    <pattern
-                      id="grid"
-                      width="20"
-                      height="20"
-                      patternUnits="userSpaceOnUse"
-                    >
-                      <path
-                        d="M 20 0 L 0 0 0 20"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="0.5"
-                        opacity="0.1"
-                      />
-                    </pattern>
-                    <linearGradient
-                      id="circuit-gradient"
-                      x1="0%"
-                      y1="0%"
-                      x2="100%"
-                      y2="100%"
-                    >
-                      <stop offset="0%" stop-color="#6366f1" />
-                      <stop offset="100%" stop-color="#ec4899" />
-                    </linearGradient>
-                  </defs>
-                  <rect
-                    width="100%"
-                    height="100%"
-                    fill="url(#grid)"
-                    class="text-slate-400 dark:text-slate-600"
-                  />
-
-                  <!-- Circuit lines radiating from image edge -->
-                  <g
-                    class="ant-circuit-lines"
-                    stroke="url(#circuit-gradient)"
-                    stroke-width="1.5"
-                    fill="none"
-                    stroke-linecap="round"
-                  >
-                    <!-- Top Left -->
-                    <path d="M 170 110 L 110 80 L 80 60 L -100 60" />
-                    <!-- Top Center -->
-                    <path d="M 190 140 L 190 100 L 150 60 L 150 -20" />
-                    <path d="M 210 140 L 210 100 L 250 60 L 250 -20" />
-                    <!-- Top Right -->
-                    <path d="M 230 110 L 290 80 L 320 60 L 500 60" />
-                    <!-- Right -->
-                    <path d="M 260 180 L 320 180 L 360 140 L 500 140" />
-                    <path d="M 260 220 L 320 220 L 360 260 L 500 260" />
-                    <!-- Bottom Right -->
-                    <path d="M 230 290 L 290 320 L 320 340 L 500 340" />
-                    <!-- Bottom Center -->
-                    <path d="M 190 260 L 190 300 L 150 340 L 150 420" />
-                    <path d="M 210 260 L 210 300 L 250 340 L 250 420" />
-                    <!-- Bottom Left -->
-                    <path d="M 170 290 L 110 320 L 80 340 L -100 340" />
-                    <!-- Left -->
-                    <path d="M 140 180 L 80 180 L 40 140 L -100 140" />
-                    <path d="M 140 220 L 80 220 L 40 260 L -100 260" />
-                  </g>
-                </svg>
+                  <span>KrupYang</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400 group-hover:text-indigo-500 link-arrow"></i>
+                </a>
+                <span class="text-[11px] text-indigo-600 dark:text-indigo-400 font-medium">Software Solutions Platform</span>
               </div>
-
-              <div class="relative z-10 group">
-                <div
-                  class="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"
-                ></div>
-                <img
-                  src="assets/images/profile-image.jpg"
-                  alt="Lisoing Sem"
-                  class="relative w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-lg z-10 transition-transform duration-300 group-hover:scale-105"
-                  loading="eager"
-                  width="128"
-                  height="128"
-                />
-              </div>
+              <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 border border-emerald-200/50 dark:border-emerald-800/50">
+                Live
+              </span>
             </div>
-
-            <!-- Title -->
-            <h1
-              class="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-100 mb-2 tracking-tight"
-            >
-              Lisoing Sem
-            </h1>
-
-            <!-- Typing Animation -->
-            <div class="typing-animation mt-2 sm:mt-3">
-              <span
-                class="typing-text text-lg sm:text-xl text-primary-500 dark:text-primary-500 font-medium"
-                id="typingText"
-                >Full Stack Developer</span
-              >
-              <span class="cursor text-primary-500">|</span>
-            </div>
-
-            <!-- Description -->
-            <p
-              class="mt-4 sm:mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-slate-600 dark:text-slate-300 px-4"
-            >
-              Crafting exceptional digital experiences through clean code and
-              modern architecture. Building scalable web applications with
-              Laravel, Vue.js, and cutting-edge technologies.
+            
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+              Official website for KrupYang Digital Ecosystem. Built with a custom CMS block engine and 3-language localization (Khmer, English, Chinese) so non-technical staff can update content easily.
             </p>
-          </div>
-        </div>
 
-        <!-- Bottom Section: Grid for Skills & Social -->
-        <div class="grid grid-cols-1 lg:grid-cols-2">
-          <!-- Skills -->
-          <div
-            class="p-8 sm:p-10 lg:p-12 border-b lg:border-b-0 lg:border-r border-slate-200 dark:border-slate-700 relative"
-          >
-            <!-- Vertical Line Extensions (Down) -->
-            <div class="tech-line-v-bottom -right-[1px] hidden lg:block"></div>
-
-            <!-- Intersections -->
-            <div
-              class="tech-marker -top-[4px] -right-[4px] hidden lg:block"
-            ></div>
-            <div
-              class="tech-marker -bottom-[4px] -right-[4px] hidden lg:block"
-            ></div>
-
-            <!-- Intersections for small screen border-b -->
-            <div class="tech-marker -bottom-[4px] -left-[4px] lg:hidden"></div>
-            <div class="tech-marker -bottom-[4px] -right-[4px] lg:hidden"></div>
-
-            <h2
-              class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-6"
-            >
-              Stack Inventory
-            </h2>
-            <div
-              id="stack-inventory-container"
-              class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 w-full"
-            >
-              <!-- Skills will be dynamically generated by JavaScript -->
+            <div class="flex flex-wrap gap-1.5 text-[11px] text-slate-500 dark:text-slate-400">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Laravel</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Inertia.js</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Vue 3</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">TypeScript</span>
+              <span class="px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 font-medium">CMS Engine</span>
+              <span class="px-2 py-0.5 rounded bg-purple-50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 font-medium">i18n</span>
             </div>
           </div>
 
-          <!-- Social -->
-          <div class="p-8 sm:p-10 lg:p-12 relative">
-            <h2
-              class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-6"
-            >
-              Connect Nodes
-            </h2>
-            <div
-              id="contact-links-container"
-              class="flex flex-wrap gap-4 items-center"
-            >
-              <!-- Contact links will be rendered by contact.js -->
-            </div>
-          </div>
-        </div>
-
-        <!-- Featured Projects Section -->
-        <div
-          class="p-8 sm:p-10 lg:p-12 border-t border-slate-200 dark:border-slate-700 relative"
-        >
-          <!-- Horizontal Line Extension -->
-          <div class="tech-line-h top-[-1px]"></div>
-          <div class="tech-line-h bottom-[-1px]"></div>
-
-          <!-- Intersections -->
-          <div class="tech-marker -top-[4px] -left-[4px]"></div>
-          <div class="tech-marker -top-[4px] -right-[4px]"></div>
-          <div class="tech-marker -bottom-[4px] -left-[4px]"></div>
-          <div class="tech-marker -bottom-[4px] -right-[4px]"></div>
-
-          <div>
-            <div class="flex items-center justify-between mb-8">
-              <h2
-                class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest"
-              >
-                Featured Projects
-              </h2>
-              <a
-                href="resume.html#projects-container"
-                class="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors"
-              >
-                <span>View all in Resume</span>
-                <i class="fas fa-arrow-right text-[10px]"></i>
-              </a>
-            </div>
-
-            <div
-              id="projects-container"
-              class="grid grid-cols-1 sm:grid-cols-2 gap-4"
-            >
-              <!-- Projects rendered dynamically by projects.js -->
-            </div>
-          </div>
-        </div>
-
-        <!-- Statistics Section - By The Numbers -->
-        <div
-          class="p-8 sm:p-10 lg:p-12 border-t border-slate-200 dark:border-slate-700 relative"
-        >
-          <!-- Horizontal Line Extension -->
-          <div class="tech-line-h top-[-1px]"></div>
-          <div class="tech-line-h bottom-[-1px]"></div>
-
-          <!-- Intersections -->
-          <div class="tech-marker -top-[4px] -left-[4px]"></div>
-          <div class="tech-marker -top-[4px] -right-[4px]"></div>
-          <div class="tech-marker -bottom-[4px] -left-[4px]"></div>
-          <div class="tech-marker -bottom-[4px] -right-[4px]"></div>
-
-          <div>
-            <!-- Section Header -->
-            <div class="flex items-center justify-center gap-3 mb-8">
-              <h2
-                class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest"
-              >
-                By The Numbers
-              </h2>
-              <a
-                href="https://github.com/lisoingsem"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-colors"
-                aria-label="GitHub"
-              >
-                <i class="fab fa-github text-base"></i>
-              </a>
-            </div>
-
-            <!-- Statistics Row -->
-            <div
-              class="flex flex-col sm:flex-row items-center justify-center border-t border-b border-slate-200 dark:border-slate-700 py-8"
-            >
-              <!-- Stat 1 -->
-              <div
-                class="flex-1 text-center py-4 sm:py-0 sm:border-r border-slate-200 dark:border-slate-700"
-              >
-                <div
-                  class="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 dark:text-slate-100 mb-2"
-                >
-                  1+
-                </div>
-                <div
-                  class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider"
-                >
-                  Years Experience
-                </div>
-              </div>
-
-              <!-- Stat 2 -->
-              <div
-                class="flex-1 text-center py-4 sm:py-0 sm:border-r border-slate-200 dark:border-slate-700"
-              >
-                <div
-                  class="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 dark:text-slate-100 mb-2"
-                >
-                  12+
-                </div>
-                <div
-                  class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider"
-                >
-                  Projects Completed
-                </div>
-              </div>
-
-              <!-- Stat 3 -->
-              <div
-                class="flex-1 text-center py-4 sm:py-0 sm:border-r border-slate-200 dark:border-slate-700"
-              >
-                <div
-                  class="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 dark:text-slate-100 mb-2"
-                >
-                  5+
-                </div>
-                <div
-                  class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider"
-                >
-                  Technologies
-                </div>
-              </div>
-
-              <!-- Stat 4 -->
-              <div class="flex-1 text-center py-4 sm:py-0">
-                <div
-                  class="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 dark:text-slate-100 mb-2"
-                >
-                  100%
-                </div>
-                <div
-                  class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider"
-                >
-                  Client Satisfaction
-                </div>
-              </div>
-            </div>
-
-            <!-- Features Row -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-              <!-- Feature 1 -->
+          <!-- 2. NetBlock -->
+          <div class="clean-card p-4 sm:p-5 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white dark:bg-slate-900/40">
+            <div class="flex items-start justify-between gap-2 mb-1.5">
               <div>
-                <h3
-                  class="text-base font-bold text-slate-900 dark:text-slate-100 mb-2"
+                <a
+                  href="https://www.netblock.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group text-sm sm:text-base font-bold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center gap-1.5"
                 >
-                  Clean Code
-                </h3>
-                <p
-                  class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed"
-                >
-                  Write maintainable and scalable code following best practices
-                </p>
+                  <span>NetBlock</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400 group-hover:text-indigo-500 link-arrow"></i>
+                </a>
+                <span class="text-[11px] text-indigo-600 dark:text-indigo-400 font-medium">Parental Control SaaS</span>
               </div>
+              <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 border border-emerald-200/50 dark:border-emerald-800/50">
+                Live
+              </span>
+            </div>
+            
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+              Parental control platform for managing children's screen time. Built the backend subscription billing, app blocking schedule rules, and real-time location tracking APIs.
+            </p>
 
-              <!-- Feature 2 -->
-              <div>
-                <h3
-                  class="text-base font-bold text-slate-900 dark:text-slate-100 mb-2"
-                >
-                  Modern Stack
-                </h3>
-                <p
-                  class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed"
-                >
-                  Leverage Laravel, Vue.js, and Tailwind for modern solutions
-                </p>
-              </div>
-
-              <!-- Feature 3 -->
-              <div>
-                <h3
-                  class="text-base font-bold text-slate-900 dark:text-slate-100 mb-2"
-                >
-                  Responsive Design
-                </h3>
-                <p
-                  class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed"
-                >
-                  Create beautiful, mobile-first experiences that work
-                  everywhere
-                </p>
-              </div>
+            <div class="flex flex-wrap gap-1.5 text-[11px] text-slate-500 dark:text-slate-400">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">PHP</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Node.js</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Express</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">REST APIs</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Billing</span>
             </div>
           </div>
-        </div>
-      </div>
-    </main>
 
-    <!-- Enhanced JavaScript for interactivity and animation -->
-    <script src="assets/js/config.js"></script>
-    <script src="assets/js/data/contact-data.js"></script>
-    <script src="assets/js/data/projects-data.js"></script>
-    <script src="assets/js/projects.js"></script>
-    <script src="assets/js/typing.js"></script>
-    <script src="assets/js/stack.js"></script>
-    <script src="assets/js/contact.js"></script>
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/dark-mode.js"></script>
-    <script src="assets/js/animation.js" defer></script>
+          <!-- 3. EDU Partner -->
+          <div class="clean-card p-4 sm:p-5 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white dark:bg-slate-900/40">
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <div>
+                <a
+                  href="https://www.edupartner.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group text-sm sm:text-base font-bold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center gap-1.5"
+                >
+                  <span>EDU Partner</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400 group-hover:text-indigo-500 link-arrow"></i>
+                </a>
+                <span class="text-[11px] text-indigo-600 dark:text-indigo-400 font-medium">School Management Platform</span>
+              </div>
+              <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 border border-emerald-200/50 dark:border-emerald-800/50">
+                Live
+              </span>
+            </div>
+            
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+              Platform for partner schools to manage institutional collaboration. Modernized UI components and developed custom features for student and course management.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 text-[11px] text-slate-500 dark:text-slate-400">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Laravel</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Vue.js</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Tailwind CSS</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Customization</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- More Systems Minimalist List -->
+        <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800/80">
+          <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-3">
+            Other client systems in production:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
+            <a href="https://www.cata.org.kh/" target="_blank" rel="noopener noreferrer" class="group p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-800/60 hover:bg-slate-50 dark:hover:bg-slate-800/50 flex items-center justify-between transition-colors">
+              <span class="font-medium text-slate-800 dark:text-slate-200">Cambodia Tourism Association</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-slate-400 group-hover:text-indigo-500"></i>
+            </a>
+            <a href="https://hemis.dghekh.com/" target="_blank" rel="noopener noreferrer" class="group p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-800/60 hover:bg-slate-50 dark:hover:bg-slate-800/50 flex items-center justify-between transition-colors">
+              <span class="font-medium text-slate-800 dark:text-slate-200">HEMIS Management System</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-slate-400 group-hover:text-indigo-500"></i>
+            </a>
+            <a href="https://sunsimexco.com.kh/" target="_blank" rel="noopener noreferrer" class="group p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-800/60 hover:bg-slate-50 dark:hover:bg-slate-800/50 flex items-center justify-between transition-colors">
+              <span class="font-medium text-slate-800 dark:text-slate-200">Sunsimexco E-Commerce</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-slate-400 group-hover:text-indigo-500"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK EXPERIENCE -->
+      <section id="experience" class="py-8 border-t border-slate-100 dark:border-slate-800/80">
+        <div class="flex items-baseline justify-between mb-6">
+          <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+            Work Experience
+          </h2>
+          <span class="text-xs text-slate-400 dark:text-slate-500 font-mono">
+            2 Years Experience
+          </span>
+        </div>
+
+        <div class="space-y-6">
+          
+          <!-- Skylink Technologies -->
+          <div class="space-y-1.5">
+            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+              <div>
+                <h3 class="text-sm font-bold text-slate-900 dark:text-white">
+                  Backend Developer
+                </h3>
+                <span class="text-xs font-semibold text-indigo-600 dark:text-indigo-400">
+                  Skylink Technologies
+                </span>
+              </div>
+              <span class="text-xs font-mono text-slate-400 dark:text-slate-500">
+                Jun 2024 – Mar 2026
+              </span>
+            </div>
+            <ul class="list-disc list-outside ml-4 text-xs text-slate-600 dark:text-slate-300 space-y-1 leading-relaxed">
+              <li>Built RESTful APIs and background queue workers for cloud and automation services.</li>
+              <li>Designed MySQL database tables and optimized slow database queries.</li>
+              <li>Integrated third-party APIs and handled webhook payment callbacks.</li>
+            </ul>
+          </div>
+
+          <!-- Durable Techs -->
+          <div class="space-y-1.5">
+            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+              <div>
+                <h3 class="text-sm font-bold text-slate-900 dark:text-white">
+                  Full-Stack Developer
+                </h3>
+                <span class="text-xs font-semibold text-indigo-600 dark:text-indigo-400">
+                  Durable Techs
+                </span>
+              </div>
+              <span class="text-xs font-mono text-slate-400 dark:text-slate-500">
+                Jun 2024 – Dec 2024
+              </span>
+            </div>
+            <ul class="list-disc list-outside ml-4 text-xs text-slate-600 dark:text-slate-300 space-y-1 leading-relaxed">
+              <li>Developed modular platform features using Laravel Modules and Vue 3.</li>
+              <li>Worked directly with school clients to build requested features and fix bugs.</li>
+              <li>Built responsive, mobile-friendly user interfaces using Tailwind CSS.</li>
+            </ul>
+          </div>
+
+          <!-- Freelance -->
+          <div class="space-y-1.5">
+            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+              <div>
+                <h3 class="text-sm font-bold text-slate-900 dark:text-white">
+                  Freelance Full-Stack Developer
+                </h3>
+                <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+                  Remote / Freelance
+                </span>
+              </div>
+              <span class="text-xs font-mono text-slate-400 dark:text-slate-500">
+                2022 – Present
+              </span>
+            </div>
+            <ul class="list-disc list-outside ml-4 text-xs text-slate-600 dark:text-slate-300 space-y-1 leading-relaxed">
+              <li>Built client web applications from scratch using Laravel, Vue.js, and MySQL.</li>
+              <li>Integrated Cambodian payment gateways: <strong class="text-slate-900 dark:text-white">Bakong KHQR</strong> and <strong class="text-slate-900 dark:text-white">ABA PayWay</strong>.</li>
+              <li>Deployed web applications to Linux servers with Nginx, SSL, and Cloudflare.</li>
+            </ul>
+          </div>
+
+          <!-- Phsar Tech -->
+          <div class="space-y-1.5">
+            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+              <div>
+                <h3 class="text-sm font-bold text-slate-900 dark:text-white">
+                  Front-End Developer
+                </h3>
+                <span class="text-xs font-semibold text-indigo-600 dark:text-indigo-400">
+                  Phsar Tech
+                </span>
+              </div>
+              <span class="text-xs font-mono text-slate-400 dark:text-slate-500">
+                Oct 2023 – Feb 2024
+              </span>
+            </div>
+            <ul class="list-disc list-outside ml-4 text-xs text-slate-600 dark:text-slate-300 space-y-1 leading-relaxed">
+              <li>Built and styled responsive web pages with Laravel Blade and Tailwind CSS.</li>
+              <li>Fixed responsive layout bugs across mobile and desktop browsers.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="py-8 border-t border-slate-100 dark:border-slate-800/80">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-4">
+          Technical Stack
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div class="space-y-1">
+            <span class="font-bold text-slate-900 dark:text-white">Backend:</span>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Laravel, PHP, Node.js, Express, MySQL, Redis, REST APIs</p>
+          </div>
+          <div class="space-y-1">
+            <span class="font-bold text-slate-900 dark:text-white">Frontend:</span>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Vue.js 3, Inertia.js, TypeScript, Tailwind CSS, Vite</p>
+          </div>
+          <div class="space-y-1">
+            <span class="font-bold text-slate-900 dark:text-white">Payments & Fintech:</span>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Bakong KHQR, ABA PayWay, Cutluy, Customer Wallets</p>
+          </div>
+          <div class="space-y-1">
+            <span class="font-bold text-slate-900 dark:text-white">Tools & Cloud:</span>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Git, GitHub, Linux, Nginx, Cloudflare SSL, Postman</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT / FOOTER -->
+      <footer class="pt-8 pb-12 border-t border-slate-100 dark:border-slate-800/80 text-xs text-slate-500 dark:text-slate-400">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p>
+            Looking to collaborate? Reach out on
+            <a href="https://t.me/lisoingsem" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 font-semibold hover:underline">Telegram</a>
+            or email
+            <a href="mailto:lisoingsem@gmail.com" class="text-indigo-600 dark:text-indigo-400 font-semibold hover:underline">lisoingsem@gmail.com</a>.
+          </p>
+          
+          <div class="flex items-center gap-3">
+            <a href="resume.html" class="hover:text-slate-900 dark:hover:text-white transition-colors">Resume</a>
+            <span>&bull;</span>
+            <a href="https://github.com/lisoingsem" target="_blank" class="hover:text-slate-900 dark:hover:text-white transition-colors">GitHub</a>
+            <span>&bull;</span>
+            <a href="https://www.linkedin.com/in/lisoing-sem-443511262" target="_blank" class="hover:text-slate-900 dark:hover:text-white transition-colors">LinkedIn</a>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
   </body>
 </html>

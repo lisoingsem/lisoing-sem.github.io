@@ -1,48 +1,86 @@
-/* Landing Page Specific Styles */
+/* Clean, Modern Developer Portfolio Styles */
 
-/* Animation SVG styles */
-.animation-svg-container {
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Clean, modern card with subtle hover transition */
+.clean-card {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clean-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.dark .clean-card:hover {
+  border-color: rgba(129, 140, 248, 0.4);
+}
+
+/* Status indicator pulse */
+.status-dot {
+  position: relative;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10b981;
+}
+
+.status-dot::after {
+  content: "";
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  pointer-events: none;
+  inset: -3px;
+  border-radius: 50%;
+  background-color: #10b981;
+  animation: pulse-ring 2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
 }
 
-.animation-svg-container svg {
-  width: 100%;
-  height: auto;
-  min-height: 200px;
-  max-height: 527px;
-  display: block;
-}
-
-/* Responsive sizing */
-@media (min-width: 640px) {
-  .animation-svg-container {
-    width: min(1000px, 90vw) !important;
-    top: 0 !important;
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
   }
 }
 
-@media (min-width: 1024px) {
-  .animation-svg-container {
-    width: min(1600px, 95vw) !important;
-  }
+/* Subtle link arrow animation */
+.group:hover .link-arrow {
+  transform: translate(2px, -2px);
 }
 
-.animation-svg-container g {
-  will-change: stroke-dashoffset;
+.link-arrow {
+  transition: transform 0.2s ease;
 }
 
-@media (max-width: 768px) {
-  .animation-svg-container g {
-    will-change: auto;
-  }
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .animation-svg-container g {
-    animation: none !important;
-  }
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(51, 65, 85, 0.5);
 }

@@ -1,11 +1,8 @@
 // Configuration Data
 // Phrases for typing animation
 const phrases = [
-  "Full Stack Developer",
-  "Laravel Developer",
-  "Vue.js Developer",
-  "PHP Developer",
-  "JavaScript Developer",
-  "Web Developer",
-  "API Developer",
+  "Full-Stack Software Engineer",
+  "Laravel & Vue.js Specialist",
+  "E-Commerce & Payment Systems Builder",
+  "API Architect & Database Engineer",
 ];
